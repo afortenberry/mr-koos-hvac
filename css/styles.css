@@ -324,12 +324,24 @@ h4, .h4 { font-size: var(--text-lg); }
   color: var(--on-navy);
   font-family: var(--font-display);
 }
-.brand-logo {
-  height: 44px;
-  width: auto;
+.brand-mark {
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
 }
-.footer-brand .brand-logo { height: 56px; }
+.brand-name {
+  font-weight: 700;
+  font-size: var(--text-lg);
+  line-height: 1.1;
+}
+.brand-tag {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-xs);
+  color: var(--on-navy-soft);
+  letter-spacing: 0.04em;
+}
 
 .main-nav {
   display: none;
@@ -776,6 +788,35 @@ h4, .h4 { font-size: var(--text-lg); }
 }
 .testimonial-name { font-weight: 700; font-size: var(--text-sm); }
 .testimonial-loc { font-size: var(--text-xs); color: var(--ink-faint); }
+
+/* ==========================================================================
+   Photography
+   ========================================================================== */
+
+.feature-photo {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 21 / 8;
+}
+.feature-photo img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 640px) {
+  .feature-photo { aspect-ratio: 4 / 3; }
+}
+
+.photo-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
+}
+.photo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.photo-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.photo-card-caption { padding: var(--space-5); }
+.photo-card-caption h4 { font-size: var(--text-base); }
+.photo-card-caption p { color: var(--ink-soft); font-size: var(--text-sm); margin-top: var(--space-2); }
 
 /* ==========================================================================
    CTA band
