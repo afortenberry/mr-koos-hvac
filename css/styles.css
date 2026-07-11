@@ -690,31 +690,12 @@ h4, .h4 { font-size: var(--text-lg); }
 .service-card:hover .service-card-link svg { transform: translateX(3px); }
 .service-card.coil .service-card-link { color: var(--coil); }
 
-/* Bento layout for the home services grid — distinctive, not templated */
-.bento {
-  display: grid;
-  gap: var(--space-5);
-  grid-template-columns: 1fr;
-}
-.bento > * { min-width: 0; }
-@media (min-width: 768px) {
-  .bento { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; }
-  .bento .service-card:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-  .bento .service-card:nth-child(2) { grid-column: span 2; }
-  .bento .service-card:nth-child(3) { grid-column: span 2; }
-  .bento .service-card:nth-child(4) { grid-column: span 4; }
-}
-.bento .service-card:nth-child(1) .service-card-icon { width: 60px; height: 60px; }
-.bento .service-card:nth-child(1) .service-card-icon svg { width: 30px; height: 30px; }
 .service-card-photo {
-  flex: 1;
-  min-height: 140px;
   border-radius: var(--radius-md);
   overflow: hidden;
+  aspect-ratio: 4 / 3;
 }
 .service-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.bento .service-card:nth-child(4) { flex-direction: row; align-items: center; flex-wrap: wrap; }
-.bento .service-card:nth-child(4) .service-card-link { margin-top: 0; margin-left: auto; }
 
 /* ==========================================================================
    Why-us / stat row
